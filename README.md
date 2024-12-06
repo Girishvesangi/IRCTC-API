@@ -12,6 +12,9 @@
 ## Install dependencies
  -npm install
 # update .env info
+-database_url
+-jwt_secret
+-admin_api_key
 ## Initialize prisma and generate client
 npx prisma generate
 npx prisma migrate dev --name init
