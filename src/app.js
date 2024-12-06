@@ -110,9 +110,9 @@ app.post('/api/bookings', authenticateToken, async (req, res) => {
   const userId = req.user.id;
 
   try {
-    // Use transaction for atomic operations
+    
     const booking = await prisma.$transaction(async (prisma) => {
-      // Lock the train record
+      
       const train = await prisma.train.findUnique({
         where: { id: trainId }
       });
@@ -121,7 +121,7 @@ app.post('/api/bookings', authenticateToken, async (req, res) => {
         throw new Error('No seats available');
       }
 
-      // Create booking and update seats atomically
+     
       const seatNumber = train.totalSeats - train.availableSeats + 1;
       
       const updatedTrain = await prisma.train.update({
