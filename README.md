@@ -11,7 +11,7 @@
 
 ## Install dependencies
  -npm install
-#update .env info
+# update .env info
 ## Initialize prisma and generate client
 npx prisma generate
 npx prisma migrate dev --name init
