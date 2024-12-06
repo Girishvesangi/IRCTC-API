@@ -8,12 +8,13 @@
 ## Tech Stack
 - Backend: Express.js
 - Database: PostgreSQL (managed by Prisma ORM)
-##Install dependencies
+
+## Install dependencies
  -npm install
 #update .env info
-##Initialize prisma and generate client
+## Initialize prisma and generate client
 npx prisma generate
 npx prisma migrate dev --name init
-##start the application
+## start the application
 -node src/app.js
 
